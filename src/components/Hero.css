@@ -1,0 +1,136 @@
+.hero-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 30px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.wave {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+  max-width: 500px;
+  color: var(--text);
+}
+
+.hero-profile {
+  width: 190px;
+  height: 190px;
+  border-radius: 70%;
+  object-fit: cover;
+  object-position:center 2%;
+  border: 5px solid var(--card-bg);
+  box-shadow: 0 4px 26px rgba(0,0,0,0.10),0 1.5px 8px #a5b4fc33;
+  background: var(--card-bg);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 1.3rem;
+}
+
+.hero-action-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 1.5rem;
+  padding: 0.55em 1.4em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(80, 120, 255, 0.06);
+  cursor: pointer;
+}
+
+.hero-action-btn svg {
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.hero-action-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  filter: brightness(1.15);
+  box-shadow: 0 4px 16px 0 rgba(80, 120, 255, 0.13);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 1.2rem;
+  padding: 0.3em 1.1em;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.dark .hero-badge {
+  background: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-profile {
+    width: 140px;
+    height: 140px;
+  }
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+  .hero-text p {
+    font-size: 1.05rem;
+  }
+  .hero-actions {
+    gap: 0.7rem;
+    margin-top: 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 30px 0 10px 0;
+  }
+  .hero-profile {
+    width: 90px;
+    height: 90px;
+  }
+  .hero-text h1 {
+    font-size: 1.3rem;
+  }
+  .hero-text p {
+    font-size: 0.98rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+} 

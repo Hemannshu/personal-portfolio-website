@@ -1,0 +1,228 @@
+.experience-section-badge {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 1.2rem;
+  padding: 0.3em 1.1em;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.dark .experience-section-badge {
+  background: var(--accent);
+}
+
+.experience-section-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0.2rem 0 0.7rem 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+.experience {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 0.5rem 0.7rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.experience-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.experience-item {
+  background: var(--card-bg);
+  border-radius: 9px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  border: 1.5px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  transition: box-shadow 0.18s, transform 0.18s;
+  position: relative;
+  padding: 0.85rem 1rem;
+}
+.experience-item:hover {
+  box-shadow: 0 8px 32px 0 rgba(80, 120, 255, 0.13), 0 0 40px 0 #a5b4fc22;
+  transform: translateY(-4px) scale(1.025);
+  border-color: var(--accent);
+}
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.experience-header:hover {
+  background: var(--card-bg);
+}
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.company-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--card-bg);
+  padding: 4px;
+  border: 1px solid var(--card-border);
+}
+.company-info h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+.company-info p {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.experience-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 260px;
+  justify-content: space-between;
+}
+.duration {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-top: 0.18rem;
+  margin-bottom: 0.1rem;
+}
+.location {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.expand-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  color: var(--text);
+}
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+.experience-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: var(--card-bg);
+}
+.experience-item.expanded .experience-details {
+  max-height: 500px;
+  padding: 0 1.5rem 1.5rem;
+}
+.description-list {
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.description-list li {
+  color: var(--text);
+  line-height: 1.6;
+  position: relative;
+  list-style-type: none;
+  padding-left: 0.9rem;
+  font-size: 0.93rem;
+}
+.description-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.skill-tag {
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid var(--card-border);
+}
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .experience-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 900px) {
+  .experience {
+    padding: 1rem 0.1rem 0.5rem 0.1rem;
+  }
+  .experience-section-title {
+    font-size: 1.5rem;
+  }
+  .experience-item {
+    padding: 0.7rem 0.5rem;
+  }
+  .company-info h3 {
+    font-size: 0.98rem;
+  }
+  .company-info p {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 600px) {
+  .experience {
+    padding: 0.2rem 0.1rem 0.2rem 0.1rem;
+  }
+  .experience-section-title {
+    font-size: 1.1rem;
+  }
+  .experience-item {
+    padding: 0.5rem 0.2rem;
+    min-width: 0;
+  }
+  .company-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .company-info h3 {
+    font-size: 0.93rem;
+  }
+  .company-info p {
+    font-size: 0.8rem;
+  }
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .experience-meta {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
