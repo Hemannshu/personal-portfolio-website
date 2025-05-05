@@ -8,10 +8,14 @@
   overflow: hidden;
 }
 
+.dark .blobs-bg {
+  display: none;
+}
+
 .blob {
   position: absolute;
   filter: blur(32px);
-  opacity: 0.15;
+  opacity: 0.25;
 }
 
 .blob1 {
@@ -34,4 +38,4 @@
   width: 600px;
   height: 600px;
   transform: translate(-50%, -50%);
-} 
+}
